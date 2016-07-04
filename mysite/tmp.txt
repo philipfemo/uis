@@ -1,0 +1,104 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$DEAVTFuWwnJg$86c+xBSPH+bw+2F6DPuYue6gO8ya/PoaFWzDIQ504jk=",
+    "last_login": null,
+    "roles": "S",
+    "faculty": "dinmor123",
+    "first_name": "Philip",
+    "last_name": "Test",
+    "email": "po@getbundl.com",
+    "study": "HU"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$GcJ20G9l8hZY$U0J1Q0nOvJtKFM1+PQVq6uXj8s8rtBaALHxg0SOqU8I=",
+    "last_login": "2016-06-07T17:08:40.372Z",
+    "roles": "S",
+    "faculty": "NV",
+    "first_name": "Christoffer",
+    "last_name": "Ja mand",
+    "email": "co@getbundl.com",
+    "study": "DIKU"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$8QNU74Mcjy94$AR/nhaHxdhT1uZ7Pp990TPSllBBCAXcZF0xIkz8VFu8=",
+    "last_login": "2016-06-12T13:39:48.692Z",
+    "roles": "P",
+    "faculty": "NV",
+    "first_name": "Philip",
+    "last_name": "Fem\u00f8",
+    "email": "philip.femo@gmail.com",
+    "study": "Datalogi"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "title": "stock",
+    "description": "whatwhat",
+    "author": 1,
+    "pub_date": "2016-06-09T08:44:38.794Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 2,
+  "fields": {
+    "title": "what",
+    "description": "in da butttt",
+    "author": 1,
+    "pub_date": "2016-06-09T08:44:38.794Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "title": "whatwhwathwwhat",
+    "description": "in da butttt",
+    "author": 1,
+    "pub_date": "2016-06-09T08:44:38.794Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "title": "superman",
+    "description": "er gay",
+    "author": 3,
+    "pub_date": "2016-06-09T08:44:38.794Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 5,
+  "fields": {
+    "title": "asd",
+    "description": "asdasdasd",
+    "author": 3,
+    "pub_date": "2016-06-09T08:44:38.794Z"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 6,
+  "fields": {
+    "title": "what in da butttttttt",
+    "description": "againgagainaian?",
+    "author": 3,
+    "pub_date": "2016-06-12T13:40:03.276Z"
+  }
+}
+]

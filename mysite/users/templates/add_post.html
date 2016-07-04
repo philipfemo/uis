@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.id %}
+  <h1>Edit User</h1>
+  <form action="{% url "users:user_edit" pk=user.id %}" method="POST">
+{% else %}
+  <h1>Add User</h1>
+  <form action="{% url "users:user_new" %}" method="POST">
+{% endif %}
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="form-group">
+    <label for="first_name"> First Name</label>
+    <input type="text" class="form-control" id="first_name" placeholder="First name"
+           name="{{ form.first_name.html_name }}"
+           {% if form.first_name.value %} value="{{ form.first_name.value }}" {% endif %}>
+    {{ form.first_name.errors }}
+  </div>
+  <div class="form-group">
+    <label for="last_name"> Last Name</label>
+    <input type="text" class="form-control" id="last_name" placeholder="Last name"
+           name="{{ form.last_name.html_name }}"
+           {% if form.last_name.value %} value="{{ form.last_name.value }}" {% endif %}>
+    {{ form.last_name.errors }}
+  </div>
+  <div class="form-group">
+    <label for="email"> Email</label>
+    <input type="text" class="form-control" id="email" placeholder="Email"
+           name="{{ form.email.html_name }}"
+           {% if form.email.value %} value="{{ form.email.value }}" {% endif %}>
+    {{ form.email.errors }}
+  <div class="form-group">
+    <label for="password"> Password</label>
+    <input type="text" class="form-control" id="password" placeholder="Password"
+           name="{{ form.password.html_name }}"
+           {% if user.password %} value="{{ user.password }}" {% endif %}>
+    {{ form.password.errors }}
+  </div>
+
+  <input id="save_contact" type="submit" value="Save" />
+</form>
+
+<a class="btn btn-default" href="{% url 'users:user_list' %}" role="button">Back to list</a>
+
+{% endblock %}

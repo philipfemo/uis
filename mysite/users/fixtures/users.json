@@ -1,0 +1,30 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$DEAVTFuWwnJg$86c+xBSPH+bw+2F6DPuYue6gO8ya/PoaFWzDIQ504jk=",
+    "last_login": null,
+    "roles": "S",
+    "faculty": "HU",
+    "first_name": "Philip",
+    "last_name": "Test",
+    "email": "po@getbundl.com",
+    "study": "Filosofi"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$8QNU74Mcjy94$AR/nhaHxdhT1uZ7Pp990TPSllBBCAXcZF0xIkz8VFu8=",
+    "last_login": "2016-06-12T13:39:48.692Z",
+    "roles": "P",
+    "faculty": "NV",
+    "first_name": "Philip",
+    "last_name": "Fem\u00f8",
+    "email": "philip.femo@gmail.com",
+    "study": "Datalogi"
+  }
+}
+]

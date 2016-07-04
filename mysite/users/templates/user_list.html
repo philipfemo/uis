@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Professors</h1>
+
+<table class="table table-striped">
+ <thead>
+   <tr>
+     <th>First name</th>
+     <th>Last name</th>
+     <th>Email</th>
+     <th>Faculty</th>
+     <th>Study</th>
+   </tr>
+ </thead>
+ {% for user in object_list %}
+   <tr>
+     {% if user.roles == 'P' %}
+     <td>{{ user.first_name }}</td>
+     <td>{{ user.last_name }}</td>
+     <td>{{ user.email }}</td>
+     <td>{{ user.faculty }}</td>
+     <td>{{ user.study }}</td>
+     <!--<td><a href="{% url "users:user_edit" pk=user.id %}">edit</a></td>-->
+   </tr>
+   {% else %}
+   {% endif %}
+ {% endfor %}
+</table>
+<a class="btn btn-default" href="{% url 'users:create_user' %}" role="button">Add user</a>
+<a class="btn btn-default" href="{% url 'home.views.index' %}" role="button">Back</a>
+{% endblock %}
