@@ -25,6 +25,7 @@ import projects.views
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^projects/', include('projects.urls')),
+    url(r'^products/', include('products.urls')),
     url(r'^users/', include('users.urls', namespace = 'users')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', home.views.index, name = 'home'),

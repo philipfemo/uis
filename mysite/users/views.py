@@ -34,6 +34,8 @@ class IndexView(ListView):
 class CreateUserView(FormView):
     template_name = "create_user.html"
     form_class = UserForm
+    #object_name = "user_data"
+
 
     def get_success_url(self):
         return reverse("users:user_list")
@@ -46,6 +48,7 @@ class CreateUserView(FormView):
         faculty = form.cleaned_data["faculty"]
         study = form.cleaned_data["study"]
         roles = form.cleaned_data["roles"]
+
 
         User.objects.create_user(
             email,
@@ -63,3 +66,5 @@ class UpdateUserView(UpdateView):
     model = User
     form_class = UserForm
     template_name = "create_user.html"
+    object_template_name = "user_data"
+    success_url = "/users/list"

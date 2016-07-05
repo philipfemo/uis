@@ -10,8 +10,8 @@
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
         {% if user.is_authenticated %}
-        <li role="presentation"><a href="{% url 'projects:projectslist' %}">Projects</a></li>
-        <li role="presentation"><a href="{% url 'users:user_list' %}">Professors</a></li>
+        <li role="presentation"><a href="{% url 'products:productslist' %}">Products</a></li>
+        <li role="presentation"><a href="{% url 'users:user_list' %}">Users</a></li>
         <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
         <li role="presentation"><a href="{% url 'login'%}">Login</a></li>

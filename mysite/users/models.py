@@ -20,7 +20,7 @@ class User(AbstractBaseUser):
 
     STUDERENDE = 'S'
     PROFESSOR = 'P'
-    
+
     ROLES_CHOICES = (
         (STUDERENDE, 'Studerende'),
         (PROFESSOR, 'Professor'),

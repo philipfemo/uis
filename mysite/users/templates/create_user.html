@@ -61,7 +61,11 @@
            name="{{ form.study.html_name }}"
            {% if form.study.value %} value="{{ form.study.value }}" {% endif %}>
   </div>
-  <input id="save_contact" type="submit" value="Save" />
+  {% if user_data %}
+  <input id="save_contact" class="btn btn-default" type="submit" value="Save" />
+  {% else %}
+  <input id="save_contact" class="btn btn-default" type="submit" value="Save" />
+  {% endif %}
 </form>
 
 <a class="btn btn-default" href="{% url 'users:user_list' %}" role="button">Back to list</a>

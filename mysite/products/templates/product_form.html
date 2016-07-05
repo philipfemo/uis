@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Form</h1>
+
+<form method='POST' action=''>{% csrf_token %}
+{{ form.as_p }}
+{% if product %}
+<input type='submit' class="btn btn-default" value='Edit Product'>
+{% else %}
+<input type='submit' class="btn btn-default" value='Create Product'>
+{% endif %}
+</form>
+<a class="btn btn-default" href="{% url 'products:productslist' %}" role="button">Cancel</a>
+
+{% endblock %}

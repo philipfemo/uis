@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped">
+ <thead>
+   <tr>
+     <th class="col-xs-3">Category Name</th>
+   </tr>
+ </thead>
+ {% for category in object_list %}
+   <tr>
+     <td>{{ category.category }}</td>
+     <td><td><a href="{% url "products:category_edit" pk=category.id %}">edit</a></td>
+   </tr>
+ {% endfor %}
+</table>
+<a class="btn btn-default" href="{% url 'products:category_create' %}" role="button">Add category</a>
+<a class="btn btn-default" href="{% url 'products:productslist' %}" role="button">Back</a>
+{% endblock %}

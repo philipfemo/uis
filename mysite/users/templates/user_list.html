@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Professors</h1>
+<h1>Users</h1>
 
 <table class="table table-striped">
  <thead>
@@ -15,13 +15,13 @@
  </thead>
  {% for user in object_list %}
    <tr>
-     {% if user.roles == 'P' %}
+     {% if user.roles == 'P' or user.roles == 'S' %}
      <td>{{ user.first_name }}</td>
      <td>{{ user.last_name }}</td>
      <td>{{ user.email }}</td>
      <td>{{ user.faculty }}</td>
      <td>{{ user.study }}</td>
-     <!--<td><a href="{% url "users:user_edit" pk=user.id %}">edit</a></td>-->
+     <td><a href="{% url "users:user_edit" pk=user.id %}">edit</a></td>
    </tr>
    {% else %}
    {% endif %}
