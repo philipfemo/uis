@@ -10,6 +10,7 @@
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
         {% if user.is_authenticated %}
+        <li role="presentation"><a href="{% url 'products:products_manage' %}">Open/Close</a></li>
         <li role="presentation"><a href="{% url 'products:productslist' %}">Products</a></li>
         <li role="presentation"><a href="{% url 'users:user_list' %}">Users</a></li>
         <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
@@ -22,6 +23,7 @@
       {% block content %}
       {% endblock %}
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 </html>

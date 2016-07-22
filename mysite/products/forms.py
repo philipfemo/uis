@@ -10,6 +10,7 @@ class ProductForm(forms.ModelForm):
             "description",
             "price",
             "stock",
+            "category",
         ]
 
 class CategoryForm(forms.ModelForm):
@@ -18,3 +19,13 @@ class CategoryForm(forms.ModelForm):
         fields = [
             "category",
         ]
+class ProducStockForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = [
+            "stock"
+        ]
+
+
+#products = Product.objects.values('surname', 'name')
+#StockFormSet = modelformset_factory(stock, extra=len(products)
