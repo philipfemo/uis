@@ -10,5 +10,6 @@ urlpatterns = [
     #ex: /users/create
     url(r'^create$', views.CreateUserView.as_view(), name="create_user"),
     url(r'^edit/(?P<pk>\d+)/$', users.views.UpdateUserView.as_view(), name="user_edit"),
+    url('^', include('django.contrib.auth.urls')),
     ]
 urlpatterns += staticfiles_urlpatterns()

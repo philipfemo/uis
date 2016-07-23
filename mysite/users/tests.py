@@ -12,12 +12,9 @@ class UserTestCase(TestCase):
     data = {
         "password": "12345",
         "last_login": None,
-        "roles": "S",
-        "faculty": "NV",
         "first_name": "John",
         "last_name": "Doe",
         "email": "john@doe.dk",
-        "study": "Filosofi"
     }
 
     def test_create(self):
@@ -29,7 +26,7 @@ class UserTestCase(TestCase):
         #Create new user with data
         response = c.post(self.url_create, self.data)
         #Check if user is there now
-        queryset = User.objects.filter(email = "john@doe.dk", first_name = "John", last_name = "Doe", roles = "S", faculty = "NV", study = "Filosofi")
+        queryset = User.objects.filter(email = "john@doe.dk", first_name = "John", last_name = "Doe")
         self.assertEqual(len(queryset), 1)
 
     def test_unique_email(self):
@@ -46,7 +43,7 @@ class UserTestCase(TestCase):
         queryset = User.objects.filter(email = "po@getbundl.com")
         self.assertEqual(len(queryset), 1)
         # Check if new user with data and same email was created
-        queryset = User.objects.filter(email = "po@getbundl.com", first_name = "John", last_name = "Doe", roles = "S", faculty = "NV", study = "Filosofi")
+        queryset = User.objects.filter(email = "po@getbundl.com", first_name = "John", last_name = "Doe")
         self.assertEqual(len(queryset), 0)
 
     def test_list(self):

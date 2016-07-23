@@ -11,9 +11,6 @@ class UserForm(forms.ModelForm):
             'last_name',
             'email',
             'password',
-            'faculty' ,
-            'study',
-            'roles',
         ]
 
 class LoginForm(AuthenticationForm):

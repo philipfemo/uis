@@ -11,13 +11,6 @@
   {% csrf_token %}
   {{ form.non_field_errors }}
   <div class="form-group">
-    <label for="roles">Student/Professor</label>
-    <select class="form-control" id="roles" name="{{ form.roles.html_name }}">
-      <option value="S">Studerende</option>
-      <option value="P">Professor</option>
-    </select>
-  </div>
-  <div class="form-group">
     <label for="first_name">First Name</label>
     <input type="text" class="form-control" id="first_name" placeholder="First name"
            name="{{ form.first_name.html_name }}"
@@ -43,23 +36,6 @@
            name="{{ form.password.html_name }}"
            {% if form.password.value %} value="{{ form.password.value }}" {% endif %}>
     {{ form.password.errors }}
-  </div>
-  <div class="form-group">
-    <label for="faculty">Faculty</label>
-    <select class="form-control" id="faculty" name="{{ form.faculty.html_name }}">
-      <option value="HU">Humanistisk Fakultet</option>
-      <option value="JU">Juridisk Fakultet</option>
-      <option value="NV">Naturvidenskabeligt Fakultet</option>
-      <option value="SAV">Samfundsvidenskabelige Fakultet</option>
-      <option value="SUV">Sundhedsvidenskabelige Fakultet</option>
-      <option value="TE">Teologisk Fakultet</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="study"> Study</label>
-    <input type="text" class="form-control" id="study" placeholder="Study"
-           name="{{ form.study.html_name }}"
-           {% if form.study.value %} value="{{ form.study.value }}" {% endif %}>
   </div>
   {% if user_data %}
   <input id="save_contact" class="btn btn-default" type="submit" value="Save" />

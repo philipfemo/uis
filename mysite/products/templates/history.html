@@ -18,6 +18,8 @@
               <th>Product Name</th>
               <th>Stock when opened</th>
               <th>Stock when closed</th>
+              <th>Opened by</th>
+              <th>Closed by</th>
             </tr>
           </thead>
           <tbody>
@@ -26,6 +28,8 @@
               <td>{{ product_stock.product.title }}</td>
               <td>{{ product_stock.stock_opened }}</td>
               <td>{{ product_stock.stock_closed }}</td>
+              <td>{{ operation.opened_by }}</td>
+              <td>{{ operation.closed_by }}</td>
             </tr>
             {% endfor %}
           </tbody>
