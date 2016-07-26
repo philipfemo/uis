@@ -49,20 +49,16 @@ class CreateUserView(FormView):
         #study = form.cleaned_data["study"]
         #roles = form.cleaned_data["roles"]
 
-        if user_authenticated == False:
-            User.objects.create_user(
-                email,
-                first_name,
-                last_name,
-                #faculty,
-                #study,
-                #roles,
-                password = password
-            )
-        else:
-            user = User.objects.get(User)
-            user.set_password(password)
-            user.save()
+
+        User.objects.create_user(
+            email,
+            first_name,
+            last_name,
+            #faculty,
+            #study,
+            #roles,
+            password = password
+        )
 
         return super(CreateUserView, self).form_valid(form)
 
