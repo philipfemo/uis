@@ -1,0 +1,9 @@
+[
+{
+  "model": "products.Category",
+  "pk": 1,
+  "fields": {
+    "category": "test"
+  }
+}
+]

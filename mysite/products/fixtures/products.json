@@ -1,0 +1,24 @@
+[
+{
+  "model": "products.Product",
+  "pk": 1,
+  "fields": {
+    "title": "test product 1",
+    "description": "tester",
+    "category": 1,
+    "price": 5,
+    "stock":5
+  }
+},
+{
+  "model": "products.Product",
+  "pk": 2,
+  "fields": {
+    "title": "test product 2",
+    "description": "tester",
+    "category": 1,
+    "price": 15,
+    "stock":15
+  }
+}
+]

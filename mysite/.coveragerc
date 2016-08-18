@@ -1,7 +1,7 @@
 [run]
 source =
   home
-  projects
+  products
   users
 omit =
   *migrations/*.py

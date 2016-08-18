@@ -19,17 +19,14 @@ from django.contrib import admin
 from users.forms import LoginForm
 import users.views
 import home.views
-import projects.views
 #from mysite.home import views
 
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
-    url(r'^projects/', include('projects.urls')),
     url(r'^products/', include('products.urls')),
     url(r'^users/', include('users.urls', namespace = 'users')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', home.views.index, name = 'home'),
-    #url(r'^login$', views.login, {'template_name': 'login.html', 'authentication_form': LoginForm}),
     url(r'^login$', users.views.LoginView.as_view(), name = 'login'),
     url(r'^logout$', users.views.logout_view, name = 'logout')
 ]
