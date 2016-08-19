@@ -1,5 +1,5 @@
 # su_re
-su
+su reexam
 
 How to install and run/deploy project
 
@@ -11,7 +11,7 @@ How to install and run/deploy project
         pip install -r requirements.txt
 3 Go to project root folder:
 
-        "su\mysite"
+        "su_re\mysite"
 4 Run/deploy project on localserver using:
 
         python manage.py runserver
