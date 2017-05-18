@@ -10,9 +10,6 @@ class UserManager(BaseUserManager):
             email = self.normalize_email(email),
             first_name = first_name,
             last_name = last_name,
-            #faculty = faculty,
-            #study = study,
-            #roles = roles,
         )
 
         user.set_password(password)
