@@ -9,6 +9,7 @@
      <th>First name</th>
      <th>Last name</th>
      <th>Email</th>
+     <th>Role</th>
    </tr>
  </thead>
  {% for user in object_list %}
@@ -16,6 +17,7 @@
      <td>{{ user.first_name }}</td>
      <td>{{ user.last_name }}</td>
      <td>{{ user.email }}</td>
+     <td>{{ user.roles }}</td>
      <td><a href="{% url "users:user_edit" pk=user.id %}">edit</a></td>
    </tr>
  {% endfor %}
