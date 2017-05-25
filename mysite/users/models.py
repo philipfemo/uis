@@ -8,6 +8,20 @@ class User(AbstractBaseUser):
     email = models.EmailField(unique=True)
     ##password = models.CharField(max_length=128)
 
+    FENCER = 'F'
+    COACH = 'C'
+
+    ROLES_CHOICES = (
+        (FENCER, 'Fencer'),
+        (COACH, 'Coach')
+    )
+
+    roles = models.CharField(
+    max_length = 3,
+    choices = ROLES_CHOICES,
+    default = FENCER,
+    )
+
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
