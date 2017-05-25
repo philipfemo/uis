@@ -7,7 +7,7 @@
 
     <body>
       <div role="navigation">
-      <img class="logo" src= "{% static "images/test.jpg" %}" >
+      <img class="logo" src= "{% static "images/test.jpg" %}" align="top" width="200" height="125"/>
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
         {% if user.is_authenticated %}
