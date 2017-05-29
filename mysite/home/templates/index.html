@@ -8,11 +8,20 @@
       rel="stylesheet" media="screen">
     <title> Frontpage</title>
 </head>
+{% if user.is_authenticated %}
 <body>
   <center>
     <h3>Hey {{ user.first_name }}</h3> <br>
     Stuff will happen here. meanwhile, go book a lesson!
   </center>
 </body>
+{% else %}
+<body>
+  <center>
+    <h3>Ay' There Mate</h3> <br>
+    Please Login or Register!
+  </center>
+</body>
+{% endif %}
 </html>
 {% endblock %}

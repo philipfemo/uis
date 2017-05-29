@@ -38,7 +38,7 @@ class CreateUserView(FormView):
 
 
     def get_success_url(self):
-        return reverse("users:user_list")
+        return reverse("home")
 
     def form_valid(self, form):
         email = form.cleaned_data["email"]
