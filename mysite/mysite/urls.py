@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^products/', include('products.urls')),
     url(r'^users/', include('users.urls', namespace = 'users')),
-    url(r'^schema/', include('schema.urls')),
+    url(r'^schema/', include('schema.urls', namespace = 'schemas')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', home.views.index, name = 'home'),
     url(r'^login$', users.views.LoginView.as_view(), name = 'login'),

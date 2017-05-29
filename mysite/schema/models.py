@@ -2,34 +2,16 @@ from django.db import models
 from users.models import User as user
 
 # Create your models here.
+
+DAYS = (
+    ("mon", "Monday"),
+    ("thu", "Thursday"),
+)
+
 class SlotField(models.Model):
-    owner = models.ForeignKey(user)
-    status = models.BooleanField(default=True)
+    start_time = models.TimeField()
+    day = models.CharField(choices=DAYS, max_length=3)
 
-class MonSlots(models.Model):
-    slot01 = models.ForeignKey(SlotField)
-    slot02 = models.ForeignKey(SlotField)
-    slot03 = models.ForeignKey(SlotField)
-    slot04 = models.ForeignKey(SlotField)
-    slot05 = models.ForeignKey(SlotField)
-    slot06 = models.ForeignKey(SlotField)
-    slot07 = models.ForeignKey(SlotField)
-    slot08 = models.ForeignKey(SlotField)
-    slot09 = models.ForeignKey(SlotField)
-    slot10 = models.ForeignKey(SlotField)
-    slot11 = models.ForeignKey(SlotField)
-    slot12 = models.ForeignKey(SlotField)
-
-class ThurSlots(models.Model):
-    slot01 = models.ForeignKey(SlotField)
-    slot02 = models.ForeignKey(SlotField)
-    slot03 = models.ForeignKey(SlotField)
-    slot04 = models.ForeignKey(SlotField)
-    slot05 = models.ForeignKey(SlotField)
-    slot06 = models.ForeignKey(SlotField)
-    slot07 = models.ForeignKey(SlotField)
-    slot08 = models.ForeignKey(SlotField)
-    slot09 = models.ForeignKey(SlotField)
-    slot10 = models.ForeignKey(SlotField)
-    slot11 = models.ForeignKey(SlotField)
-    slot12 = models.ForeignKey(SlotField)
+class Choice(models.Model):
+    slot = models.ForeignKey(SlotField, on_delete=models.CASCADE, unique=True, related_name="choices")
+    owner = models.ForeignKey(user, on_delete=models.CASCADE, related_name="choices")

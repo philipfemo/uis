@@ -13,8 +13,9 @@
         {% if user.is_authenticated %}
         <!--<li role="presentation"><a href="{% url 'products:products_manage' %}">Open/Close</a></li>
         <li role="presentation"><a href="{% url 'products:product_history' %}">History</a></li>
-        <li role="presentation"><a href="{% url 'products:productslist' %}">Products</a></li>-->
-        <li role="presentation"><a href="{% url 'users:user_list' %}">Users</a></li>
+        <li role="presentation"><a href="{% url 'products:productslist' %}">Products</a></li>
+        <li role="presentation"><a href="{% url 'users:user_list' %}">Users</a></li>-->
+        <li role="presentation"><a href="{% url 'schemas:schema' %}">Lesson list</a></li>
         <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
         <li role="presentation"><a href="{% url 'login'%}">Login</a></li>
