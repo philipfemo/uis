@@ -2,7 +2,7 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 from django.db import models
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, first_name, last_name, password = None,):
+    def create_user(self, roles, email, first_name, last_name, password = None,):
         if not email:
             raise ValueError('Users must provide email')
 
@@ -10,6 +10,7 @@ class UserManager(BaseUserManager):
             email = self.normalize_email(email),
             first_name = first_name,
             last_name = last_name,
+            roles = roles,
         )
 
         user.set_password(password)
