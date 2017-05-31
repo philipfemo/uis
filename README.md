@@ -1,6 +1,4 @@
-# su_re
-su reexam
-
+# UIS 
 How to install and run/deploy project
 
 1 - Install Pip through:
