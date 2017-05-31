@@ -9,7 +9,7 @@ How to install and run/deploy project
         pip install -r requirements.txt
 3 Go to project root folder:
 
-        "su_re\mysite"
+        "/mysite"
 4 Run/deploy project on localserver using:
 
         python manage.py runserver
